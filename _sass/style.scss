@@ -1,0 +1,31 @@
+.navbar-trevligheten
+{
+  /*background-color: transparent;*/
+  /*border-color: transparent;*/
+  .title {
+    /*color:black;*/
+    &:hover {
+      text-decoration: none;
+    }
+    h3 {
+      margin-top: 7px;
+    }
+  }
+}
+
+.aboutpic
+{
+  max-width: 150px;
+}
+.about-link
+{
+  margin-right: 10px;
+}
+.project_title
+{
+  /*color: black;*/
+  &:hover{
+    text-decoration: none;
+    color: black;
+  }
+}
