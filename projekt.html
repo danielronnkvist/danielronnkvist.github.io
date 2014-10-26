@@ -3,7 +3,11 @@ layout: default
 title: projekt
 ---
 {% for post in site.posts %}
-  <li class="post-{{ post.category }}">
-    <a href="{{ post.url }}">{{ post.title }}</a><abbr>{{ post.date | date_to_string }}</abbr>
-  </li>
+    <a href="{{ post.url }}">
+      <div class="projects" style="background-image:url('/images/{{ post.image_description }}');">
+        <div class="projects_banner">
+          <h3 class="project_title">{{ post.title }}</h4>
+        </div>
+      </div>
+    </a>
 {% endfor %}
