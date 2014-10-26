@@ -6,12 +6,22 @@ layout: default
     <iframe class="embed-responsive-item" src="{{ page.video }}"></iframe>
   </div>
 {% endif %}
-{% if page.image != nil %}
-  <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="//www.youtube.com/embed/zpOULjyy-n8?rel=0"></iframe>
+<div class="col-sm-12">
+  <h3>{{ page.title }}</h3>
+</div>
+{% if page.video != nil %}
+<div class="col-sm-12">
+  <p>
+    {{ content }}
+  </p>
+</div>
+{% else %}
+  <div class="col-sm-6">
+    <p>
+      {{ content }}
+    </p>
+  </div>
+  <div class="col-sm-6">
+    <img src="/images/{{ page.image_description }}" class="img-responsive">
   </div>
 {% endif %}
-<h3>{{ page.title }}</h3>
-<p>
-  {{ content }}
-</p>
