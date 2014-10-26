@@ -1,5 +1,5 @@
 $link-color: #000000;
-$navbar-default-bg: transparent;
+$navbar-default-bg: rgba(0,0,0,0);
 
 @import 'bootstrap';
 
@@ -14,7 +14,7 @@ $navbar-default-bg: transparent;
 }
 
 .projects {
-	
+
 	@extend .col-md-6, .col-sm-12, .col-xs-12;
 	height: 100%;
 	max-height: 445px;
@@ -25,14 +25,14 @@ $navbar-default-bg: transparent;
 	animation-duration: 4s;
 	animation-name: animatedBackground;
 }
-@keyframes animatedBackground 
-{ 
-	from { 
-		background-size: 100%; 
-	} 
-	to { 
-		background-size: 215%; 
-	} 
+@keyframes animatedBackground
+{
+	from {
+		background-size: 100%;
+	}
+	to {
+		background-size: 215%;
+	}
 }
 $banner-height: 105px;
 .projects_banner
@@ -61,7 +61,7 @@ $banner-height: 105px;
 .aboutpic
 {
 	@extend .col-md-4, .col-sm-2, .hidden-xs;
-	img {	
+	img {
 		@extend .img-circle, .img-responsive;
 		max-width: 150px;
 		margin-top: 30px;
