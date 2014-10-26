@@ -22,17 +22,6 @@ $navbar-default-bg: rgba(0,0,0,0);
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding-top: 240px;
-	animation-duration: 4s;
-	animation-name: animatedBackground;
-}
-@keyframes animatedBackground
-{
-	from {
-		background-size: 100%;
-	}
-	to {
-		background-size: 215%;
-	}
 }
 $banner-height: 80px;
 .projects_banner
