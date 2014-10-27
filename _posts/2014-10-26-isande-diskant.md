@@ -3,6 +3,7 @@ layout: post
 title: Isande diskant
 video: //player.vimeo.com/video/79545746
 image: isande.jpg
+keywords: isande diskant kortfilm tnm088
 ---
 En kortfilm som handlar om blindheten för ens begränsningar och vad ogenomtänkta handlingar kan få för konsekvenser.
 Den utspelar sig i ett samhälle där musik klassas som, och är, en olaglig och farlig drog samt ett kompisgängs möte med ett missbruk.

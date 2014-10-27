@@ -2,6 +2,7 @@
 layout: post
 title: Vattentornet
 image: vattentornet.png
+keywords: vattentornet pub ruby on rails
 ---
 
 Jag var med och gjorde studentpuben Vattentornets hemsida.

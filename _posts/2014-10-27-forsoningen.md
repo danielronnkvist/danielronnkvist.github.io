@@ -2,6 +2,7 @@
 layout: post
 title: Försoningen
 image: forsoningen.jpg
+keywords: försoningen nordahlfilm frame filmfestival kortfilm
 ---
 
 Under våren 2013 filmade jag filmen Försoningen gjord av [Nordahlfilm](http://nordahlfilm.com).
