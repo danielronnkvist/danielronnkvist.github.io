@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Vattentornet
-image_description: vattentornet.png
+image: vattentornet.png
 ---
 
 Jag var med och gjorde studentpuben Vattentornets hemsida.
