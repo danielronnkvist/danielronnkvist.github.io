@@ -30,3 +30,9 @@
     color: black;
   }
 }
+.instapic
+{
+  @extend .img-responsive;
+  float: left;
+  width: 25%;
+}
