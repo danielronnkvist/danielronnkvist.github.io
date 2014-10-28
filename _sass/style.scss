@@ -30,9 +30,13 @@
     color: black;
   }
 }
-.instapic
-{
+.instapic{
   @extend .img-responsive;
   float: left;
-  width: 25%;
+  @media(min-width:768px){
+    width: 25%;
+  }
+  @media(max-width:767px){
+    width: 50%;
+  }
 }

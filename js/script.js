@@ -20,8 +20,6 @@ module.factory('Instagram', ['$http',
       'get': function(count, user) {
         var request = '/users/' + user + '/media/recent';
         var url = base + request;
-        // var url = "/v1/users/326924/media/recent?access_token=326924.1fb234f.f0cb30f9aa394f50bcd8c38f877726a4";
-
         var config = {
           'params': {
             'client_id': clientId,
