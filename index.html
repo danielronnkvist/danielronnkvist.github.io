@@ -3,3 +3,6 @@ layout: default
 title:
 ---
 <img src="/images/seal.jpg" class="img-responsive" alt="säl">
+<div ng-controller="insta">
+  <img ng-repeat="image in images" src="{{ image.images.standard_resolution.url }}" class="img-responsive">
+</div>
