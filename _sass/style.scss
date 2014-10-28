@@ -40,3 +40,8 @@
     width: 50%;
   }
 }
+.flickpic{
+  @extend .img-responsive;
+  float: left;
+  max-height: 200px;
+}
