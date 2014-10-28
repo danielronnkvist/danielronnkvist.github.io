@@ -3,5 +3,7 @@ layout: default
 title: foton
 ---
 <div ng-controller="flickr">
-  <img ng-repeat="image in images" src="https://farm/*/image.farm/*/.staticflickr.com//*/ image.server /*///*/ image.id /*/_/*/ image.secret /*/_q.jpg" class="flickpic">
+  <a ng-repeat="image in images" href="https://farm/*/image.farm/*/.staticflickr.com//*/ image.server /*///*/ image.id /*/_/*/ image.secret /*/_b.jpg" data-lightbox="flickr" data-title="/*/ image.title /*/">
+    <img src="https://farm/*/image.farm/*/.staticflickr.com//*/ image.server /*///*/ image.id /*/_/*/ image.secret /*/_q.jpg" class="flickpic">
+  </a>
 </div>
