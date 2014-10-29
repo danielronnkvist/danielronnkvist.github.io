@@ -45,3 +45,7 @@
   float: left;
   max-height: 200px;
 }
+.flickpic-container{
+  @extend .col-md-2, .col-sm-3, .col-xs-6;
+  margin-bottom: 34px;
+}
