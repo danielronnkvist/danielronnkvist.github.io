@@ -2,11 +2,11 @@
 layout: default
 title: projekt
 ---
-{% for post in site.posts %}
-    <a href="{{ post.url }}">
-      <div class="projects" style="background-image:url('/images/{{ post.image }}');">
+{% for projects in site.projects %}
+    <a href="{{ projects.url }}">
+      <div class="projects" style="background-image:url('/images/{{ projects.image }}');">
         <div class="projects_banner">
-          <h3 class="project_title">{{ post.title }}</h4>
+          <h3 class="project_title">{{ projects.title }}</h4>
         </div>
       </div>
     </a>

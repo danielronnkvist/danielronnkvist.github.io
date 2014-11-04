@@ -36,15 +36,28 @@ module.factory('Instagram', ['$http',
 module.controller('flickr', function ($scope, Flickr) {
   Flickr.get().success(function (response){
     $scope.images = response.photos.photo;
+    for(var i = 0; i < $scope.images.length; i++)
+    {
+      console.log($scope.images[i])
+      var link = Flickr.sizes($scope.images[i].id).success(function (response){
+        console.log(response.sizes["size"][0]['source'])
+        return response.sizes["size"][0]['source']
+      });
+      document.getElementById($scope.images[i].id).setAttribute('href',link)
+    }
   });
 });
 
 module.factory('Flickr', ['$http', function ($http) {
-  // var url = "https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=328531f8cc4cb07d65e1a4316c8c5a1d&user_id=48988818%40N08&format=json"
   var url = "https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=328531f8cc4cb07d65e1a4316c8c5a1d&user_id=48988818%40N08&format=json&nojsoncallback=1";
+  var sizeUrlbegin = "https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=328531f8cc4cb07d65e1a4316c8c5a1d&photo_id=";
+  var sizeUrlend = "&format=json&nojsoncallback=1";
   return{
     'get': function() {
       return $http.get(url);
+    },
+    'sizes': function(id) {
+      return $http.get(sizeUrlbegin+id+sizeUrlend);
     }
   };
 }]);
