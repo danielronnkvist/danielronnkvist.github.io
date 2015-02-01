@@ -2,6 +2,7 @@
 layout: post
 title: Stereoscopic Snow Simulation
 image: sss.jpg
+video: https://www.youtube.com/embed/_D2nuMoc3es
 keywords: stereoscopic snow simulation tnm061 snösimulation
 ---
 

@@ -2,6 +2,7 @@
 layout: post
 title: Försoningen
 image: forsoningen.jpg
+video: //player.vimeo.com/video/115697559
 keywords: försoningen nordahlfilm frame filmfestival kortfilm
 ---
 
