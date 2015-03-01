@@ -5,8 +5,8 @@ image: forsoningen.jpg
 video: //player.vimeo.com/video/115697559
 keywords: försoningen nordahlfilm frame filmfestival kortfilm
 ---
+*The film is in Swedish*
 
-Under våren 2013 filmade jag filmen Försoningen gjord av [Nordahlfilm](http://nordahlfilm.com).
-Ett porträtt av en far och ett kärt återseende och hans tankar.
+I was the cinematographer for the film Försoningen produced by [Nordahlfilm](http://nordahlfilm.com). It was shot during the spring of 2013 and is a portrait of a father and a meeting with his long lost son.
 
-På filmfestivalen Frame 2014 tilldelades jag pris för bästa foto.
+The film was awarded with best cinematography at Frame filmfestival in Gothenburg 2014.

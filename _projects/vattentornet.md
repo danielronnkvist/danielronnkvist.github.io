@@ -5,13 +5,13 @@ image: vattentornet.png
 keywords: vattentornet pub ruby on rails
 ---
 
-Jag var med och gjorde studentpuben Vattentornets hemsida.
-Den är byggd i Ruby on rails och jag jobbade mest på användarhanteringen och bokningssytemet.
+Web page for the student pub Vattentornet.
+It is built in Ruby on rails and my responsibilities was user handling and the booking system.
 
-För användarsystemet använde jag mig av [Devise](https://github.com/plataformatec/devise).
-Ett av kraven var att nya användare skulle läggas till med bara mailadressen och att de sedan skulle få ett mail för att aktivera sitt konto.
-För att hantera hierarkin använde jag mig av [CanCan](https://github.com/ryanb/cancan).
+For user handling I used [Devise](https://github.com/plataformatec/devise).
+One request was that new users should be added by only supplying their email and then they would get an email with an activation link.
+To handle the user hierarchy I used the gem [CanCan](https://github.com/ryanb/cancan).
 
-Bokningssystemet krävde en kalender som skapades med [Moment.js](http://momentjs.com/) och [Angularjs](https://angularjs.org).
+The booking system is a simple CRUD system, but the calendar view was built with the help of [Moment.js](http://momentjs.com/) och [Angularjs](https://angularjs.org).
 
-Ta gärna en titt på [vattentor.net](http://vattentor.net/) och kika på koden på [GitHub](https://github.com/klaseskilson/vattentornet).
+The site is live at [vattentor.net](http://vattentor.net/) and the project is open source on [GitHub](https://github.com/klaseskilson/vattentornet).

@@ -5,10 +5,11 @@ video: //player.vimeo.com/video/79545746
 image: isande.jpg
 keywords: isande diskant kortfilm tnm088
 ---
-En kortfilm som handlar om blindheten för ens begränsningar och vad ogenomtänkta handlingar kan få för konsekvenser.
-Den utspelar sig i ett samhälle där musik klassas som, och är, en olaglig och farlig drog samt ett kompisgängs möte med ett missbruk.
+*The film is in Swedish*
 
-En film som gjordes i kursen TNM088 vid Linköpings Universitet. Jag var regissör i projektet tillsamans med Olov Schurz.
-Manus och idé skrevs tillsammans med Olov, Klas Eskilson och Johan Henriksson.
+A short film about peoples limitations and what consequences impulsive actions can have on someones life.
+The movie is set in a society where music is classified as an illegal and dangerous drug.
 
-Vinnare av den orangea kuben som Medietekniksektionen delar ut varje år för mest kreativa projektet.
+The movie was made in the course TNM088 at Linköpings University. I was co-director for the project together with Olov Schurz. Manuscript and idea was produced together with Olov, Klas Eskilson and Johan Henriksson.
+
+Isande diskant won the prize for most creative project by the board of the media technology association.
