@@ -3,5 +3,10 @@ layout: default
 title:
 ---
 <div ng-controller="insta">
-  <img ng-repeat="image in images" src="/*/ image.images.standard_resolution.url /*/" class="instapic">
+  <span ng-repeat="image in images">
+    <img ng-if="!image.video" src="/*/ image.url /*/" class="instapic">
+    <video autoplay loop ng-if="image.video" src="/*/ image.url /*/" class="instapic">
+      <source src="/*/ image.url /*/" type="video/mp4">
+    </video>
+  </span>
 </div>

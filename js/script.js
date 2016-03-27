@@ -3,11 +3,24 @@ var module = angular.module('trevligheten', [], function($interpolateProvider) {
     $interpolateProvider.endSymbol('/*/');
 });
 
-module.controller('insta', function ($scope, Instagram) {
+module.controller('insta', function ($scope, Instagram, $sce) {
   var user = '326924' // trevligheten
 
   Instagram.get(8, user).success(function(response){
-    $scope.images = response.data;
+    $scope.images = response.data.map(function(image){
+      if(image.videos){
+        debugger
+        return {
+          url: $sce.trustAsResourceUrl(image.videos.standard_resolution.url),
+          video: true
+        }
+      }else{
+        return {
+          url: image.images.standard_resolution.url,
+          video: false
+        }
+      }
+    });
   })
 });
 
