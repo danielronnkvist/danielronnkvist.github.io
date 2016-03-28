@@ -1,5 +1,11 @@
 body{
   background-image: url(/img/shattered.png);
+  overflow: hidden;
+}
+.page-content{
+  position: absolute;
+  right: 1%;
+  left: 1%;
 }
 #main{
   margin-bottom: 30px;
