@@ -9,7 +9,6 @@ module.controller('insta', function ($scope, Instagram, $sce) {
   Instagram.get(8, user).success(function(response){
     $scope.images = response.data.map(function(image){
       if(image.videos){
-        debugger
         return {
           url: $sce.trustAsResourceUrl(image.videos.standard_resolution.url),
           video: true
