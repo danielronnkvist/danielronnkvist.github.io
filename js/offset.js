@@ -25,8 +25,8 @@ Offset.tilt = function(motion) {
     this.originMotion = motion;
   }
 
-  var x = this.distance * (this.originMotion - motion[0]);
-  var y = this.distance * (this.originMotion - motion[1]);
+  var x = this.distance * (this.originMotion[0] - motion[0]);
+  var y = this.distance * (this.originMotion[1] - motion[1]);
   this.element.style.transform = "translate("+x+"px,"+y+"px)";
 }
 
