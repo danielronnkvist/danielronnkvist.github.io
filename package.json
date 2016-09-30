@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Personal webpage",
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server"
+    "start": "NODE_ENV=development ./node_modules/.bin/webpack-dev-server"
   },
   "repository": {
     "type": "git",
