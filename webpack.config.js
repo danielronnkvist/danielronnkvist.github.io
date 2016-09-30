@@ -25,6 +25,10 @@ module.exports = {
           "css",
           "sass"
         ]
+      },
+      {
+        test: /\.(ttf|woff|woff2)$/,
+        loader: 'file?name=/fonts/[name].[ext]'
       }
     ]
   }
