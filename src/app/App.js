@@ -8,7 +8,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <Header/>
+        <Header title="trevligheten" ingress="daniel rönnkvist"/>
       </div>
     );
   }

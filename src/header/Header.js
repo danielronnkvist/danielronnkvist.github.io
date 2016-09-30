@@ -3,10 +3,15 @@ import './Header.scss';
 
 export default class Header extends Component {
   render() {
+    const {
+      title,
+      ingress,
+    } = this.props;
+
     return (
       <div className="header">
-        <h1>trevligheten</h1>
-        <h4>Daniel Rönnkvist</h4>
+        <h1>{title}</h1>
+        <h4>{ingress}</h4>
       </div>
     );
   }
