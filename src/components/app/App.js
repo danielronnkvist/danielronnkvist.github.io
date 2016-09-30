@@ -9,7 +9,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <Header title="trevligheten" ingress="daniel rönnkvist"/>
+        <Header/>
         <div className="projects">
           <Project id="1" title="Stereoscopic Snow Simulation"/>
           <Project id="2" title="Stereoscopic Snow Simulation"/>
