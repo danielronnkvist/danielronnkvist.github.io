@@ -1,13 +1,8 @@
+import { createAction } from 'redux-actions';
+
 // REDUX ACTION TYPES
 
 export const CHANGE_PROJECT = 'CHANGE_PROJECT';
-
-// Helper methods
-
-let createAction = (type, payloadCreator = () => undefined) => ({
-  type,
-  payload: typeof payloadCreator === 'function' ? payloadCreator() : undefined,
-});
 
 // REDUX ACTIONS
 

@@ -11,10 +11,10 @@ export default class App extends Component {
       <div>
         <Header title="trevligheten" ingress="daniel rönnkvist"/>
         <div className="projects">
-          <Project title="Stereoscopic Snow Simulation"/>
-          <Project title="Stereoscopic Snow Simulation"/>
-          <Project title="Stereoscopic Snow Simulation"/>
-          <Project title="Stereoscopic Snow Simulation"/>
+          <Project id="1" title="Stereoscopic Snow Simulation"/>
+          <Project id="2" title="Stereoscopic Snow Simulation"/>
+          <Project id="3" title="Stereoscopic Snow Simulation"/>
+          <Project id="4" title="Stereoscopic Snow Simulation"/>
         </div>
       </div>
     );
