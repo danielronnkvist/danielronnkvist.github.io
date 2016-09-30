@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var autoprefixer = require('autoprefixer');
 var path = require('path');
 
 module.exports = {
@@ -24,6 +25,7 @@ module.exports = {
         loaders: [
           "style",
           "css",
+          "postcss",
           "sass"
         ]
       },
@@ -32,6 +34,9 @@ module.exports = {
         loader: 'file?name=/fonts/[name].[ext]'
       }
     ]
+  },
+  postcss: function () {
+    return [autoprefixer]
   },
   plugins: [
     new webpack.DefinePlugin({
