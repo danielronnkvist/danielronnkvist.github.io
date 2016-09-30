@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { changeProject } from './../../actions';
 import './Project.scss';
 
 export default class Project extends Component {
@@ -7,10 +6,11 @@ export default class Project extends Component {
     const {
       title,
       id,
+      onProjectClick,
     } = this.props;
 
     return (
-      <div className="project" onClick={() => changeProject(id) }>
+      <div className="project" onClick={onProjectClick}>
         <span className="title">
           {title}
         </span>

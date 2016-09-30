@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { connect } from "react-redux";
 import './Header.scss';
 
-class Header extends Component {
+export default class Header extends Component {
 
   displayBody(body) {
     if(body && typeof body === 'string') {
@@ -15,21 +14,22 @@ class Header extends Component {
   }
 
   render() {
-    const { project } = this.props;
+    const {
+      image,
+      title,
+      ingress,
+      body,
+    } = this.props.project;
     let headerStyle = {
-      "backgroundImage": `url(${project.image})`
+      "backgroundImage": `url(${image})`
     };
 
     return (
       <div className="header" style={headerStyle}>
-        <h1>{project.title}</h1>
-        <h4>{project.ingress}</h4>
-        { this.displayBody(project.body) }
+        <h1>{title}</h1>
+        <h4>{ingress}</h4>
+        { this.displayBody(body) }
       </div>
     );
   }
 }
-
-export default connect((state) => ({
-  project: state.project,
-}))(Header);
