@@ -10,7 +10,7 @@ export default class Project extends Component {
     } = this.props;
 
     return (
-      <div className="project" onClick={onProjectClick}>
+      <div className="project" onClick={() => onProjectClick(id) }>
         <span className="title">
           {title}
         </span>
