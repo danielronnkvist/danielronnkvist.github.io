@@ -40,7 +40,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.jpg$/,
+        test: /\.(jpg|png)$/,
         loaders: [
           'file?hash=sha512&digest=hex&name=/[hash].[ext]',
           'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
