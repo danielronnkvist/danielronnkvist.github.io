@@ -22,6 +22,7 @@ class Projects extends Component {
       return <Project
         key={k}
         id={k}
+        image={projects[k].attributes.image}
         title={projects[k].attributes.title}
         body={projects[k].html}
         onProjectClick={this.props.onProjectClick}

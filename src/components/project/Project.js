@@ -6,11 +6,15 @@ export default class Project extends Component {
     const {
       title,
       id,
+      image,
       onProjectClick,
     } = this.props;
+    let projectStyle = {
+      "backgroundImage": 'url('+require(`./../../data/${image}`) + ')',
+    };
 
     return (
-      <div className="project" onClick={() => onProjectClick(id) }>
+      <div style={projectStyle} className="project" onClick={() => onProjectClick(id) }>
         <span className="title">
           {title}
         </span>
