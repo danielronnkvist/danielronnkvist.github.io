@@ -32,7 +32,14 @@ module.exports = {
       {
         test: /\.(ttf|woff|woff2)$/,
         loader: 'file?name=/fonts/[name].[ext]'
-      }
+      },
+      {
+        test: /\.md$/,
+        loaders: [
+          "html",
+          "markdown?gfm=false",
+        ]
+      },
     ]
   },
   postcss: function () {
