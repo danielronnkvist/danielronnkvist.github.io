@@ -36,8 +36,7 @@ module.exports = {
       {
         test: /\.md$/,
         loaders: [
-          "html",
-          "markdown?gfm=false",
+          "raw",
         ]
       },
     ]
