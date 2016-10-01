@@ -5,7 +5,7 @@ let defaultState = {
   attributes: {
     title: "trevligheten",
     ingress: "daniel rönnkvist",
-    image: "https://pbs.twimg.com/media/B_5YAYNUQAAjgTA.png",
+    image: "home.jpg",
   },
   html: undefined,
 }

@@ -21,7 +21,7 @@ export default class Header extends Component {
       html,
     } = this.props.project;
     let headerStyle = {
-      "backgroundImage": `url(${image})`
+      "backgroundImage": 'url('+require(`./../../data/${image}`) + ')',
     };
 
     return (
