@@ -1,5 +1,5 @@
 import { createAction } from 'redux-actions';
-import { requireProject } from './helpers.js';
+import { requireProject, animateScrollTo } from './helpers.js';
 
 // REDUX ACTION TYPES
 
@@ -9,6 +9,7 @@ export const RESET_PROJECT = 'RESET_PROJECT';
 // REDUX ACTIONS
 
 export const changeProject = createAction(CHANGE_PROJECT, (id) => {
+  animateScrollTo(500);
   return requireProject(id);
 });
 
