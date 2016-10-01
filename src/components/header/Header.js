@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import './Header.scss';
 
 export default class Header extends Component {
@@ -25,10 +26,17 @@ export default class Header extends Component {
     };
 
     return (
-      <div className="header" style={headerStyle}>
-        <h1>{title}</h1>
-        <h4>{ingress}</h4>
-        { this.displayBody(html) }
+      <div className="header">
+        <ReactCSSTransitionGroup
+          transitionName="header-animation"
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={300}>
+          <div key={image} className="background" style={headerStyle}>
+            <h1>{title}</h1>
+            <h4>{ingress}</h4>
+            { this.displayBody(html) }
+          </div>
+        </ReactCSSTransitionGroup>
       </div>
     );
   }
