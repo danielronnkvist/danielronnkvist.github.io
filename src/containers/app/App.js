@@ -3,10 +3,16 @@ import { connect } from "react-redux";
 import './App.scss';
 
 // Components
+import CloseButton from './../../components/closeButton/CloseButton.js';
 import Header from './../../components/header/Header.js';
 import Projects from './../projects/Projects.js';
 
 class App extends Component {
+
+  getCloseButton(project) {
+    return project.id ? <CloseButton/> : '';
+  }
+
   render() {
     const {
       project,
@@ -16,6 +22,7 @@ class App extends Component {
     return (
       <div>
         <Header project={project}/>
+        { this.getCloseButton(project) }
         <Projects/>
       </div>
     );
