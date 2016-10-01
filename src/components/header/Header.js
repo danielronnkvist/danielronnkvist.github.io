@@ -6,9 +6,7 @@ export default class Header extends Component {
   displayBody(body) {
     if(body && typeof body === 'string') {
       return (
-        <p>
-          {body}
-        </p>
+        <span dangerouslySetInnerHTML={{__html: body}}></span>
       );
     }
   }
