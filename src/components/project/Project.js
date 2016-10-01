@@ -14,11 +14,11 @@ export default class Project extends Component {
     };
 
     return (
-      <div style={projectStyle} className="project" onClick={() => onProjectClick(id) }>
+      <a style={projectStyle} className="project" onClick={() => onProjectClick(id) }>
         <span className="title">
           {title}
         </span>
-      </div>
+      </a>
     );
   }
 }
