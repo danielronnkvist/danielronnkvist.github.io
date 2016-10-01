@@ -29,7 +29,8 @@ export const requireProject = (name) => {
   }
 
   return {
-    attributes: attributes,
+    attributes,
+    id: name,
     html: marked(markdown)
   };
 }
