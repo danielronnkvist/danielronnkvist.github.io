@@ -5,13 +5,27 @@ import { changeProject } from './../../actions';
 import './Projects.scss';
 
 class Projects extends Component {
+
+  getProjects() {
+    function requireAll(r) {
+      return r.keys().reduce((o,f) => {
+        o[f] = r(f);
+        return o;
+      }, {});
+    }
+    return requireAll(require.context('./../../data/', true, /\.md$/));
+  }
+
+  displayProjects(projects) {
+    return Object.keys(projects).map((k) => {
+      return <Project key={k} id={k} body={projects[k]} onProjectClick={this.props.onProjectClick} />;
+    });
+  }
+
   render() {
     return (
       <div className="projects">
-        <Project onProjectClick={this.props.onProjectClick} id="1" title="Stereoscopic Snow Simulation"/>
-        <Project onProjectClick={this.props.onProjectClick} id="2" title="Stereoscopic Snow Simulation"/>
-        <Project onProjectClick={this.props.onProjectClick} id="3" title="Stereoscopic Snow Simulation"/>
-        <Project onProjectClick={this.props.onProjectClick} id="4" title="Stereoscopic Snow Simulation"/>
+        { this.displayProjects(this.getProjects()) }
       </div>
     );
   }
