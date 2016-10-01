@@ -39,6 +39,13 @@ module.exports = {
           "raw",
         ]
       },
+      {
+        test: /\.jpg$/,
+        loaders: [
+          'file?hash=sha512&digest=hex&name=/[hash].[ext]',
+          'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+        ]
+      }
     ]
   },
   postcss: function () {
