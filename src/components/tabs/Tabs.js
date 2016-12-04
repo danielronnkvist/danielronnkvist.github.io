@@ -1,9 +1,23 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import './Tabs.scss';
+import {
+  PROJECTS,
+  PHOTOS,
+} from './constants.js';
 import { changeTab } from './../../actions';
 
 class Tabs extends Component {
+  getName(t) {
+    switch (t) {
+      case PHOTOS:
+        return 'Photos'
+      case PROJECTS:
+      default:
+        return 'Projects'
+    }
+  }
+
   render() {
     const {
       tabs,
@@ -15,7 +29,7 @@ class Tabs extends Component {
       <div className="tabs">
         {tabs.map(t => (
           <div key={t} onClick={() => changeTab(t)} className={`tab ${currentTab === t ? 'active' : ''}`}>
-            {t}
+            {this.getName(t)}
           </div>
         ))}
       </div>
