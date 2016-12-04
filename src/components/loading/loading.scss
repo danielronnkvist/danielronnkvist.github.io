@@ -1,0 +1,25 @@
+@keyframes line {
+  0% {
+    width: 50%;
+    transform: translateX(50%);
+  }
+  50% {
+    width: 100%;
+    transform: translateX(0%);
+  }
+  100% {
+    width: 50%;
+    transform: translateX(50%);
+  }
+}
+
+.loading {
+  width: 3em;
+  margin: 0 auto;
+
+  &-line {
+    height: 2px;
+    background: black;
+    animation: line 2s ease-in-out infinite;
+  }
+}
