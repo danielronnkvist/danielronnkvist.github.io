@@ -1,0 +1,37 @@
+.tabs {
+  $border-height: 1px;
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+
+  .tab {
+    margin: 0 1em;
+    padding: 0 1em;
+    text-align: center;
+    cursor: pointer;
+
+    &.active {
+      border-bottom: solid $border-height;
+      &::after {
+        width: 0;
+        transition: width 0s;
+      }
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 0;
+      transform: translateX(calc(100% + 2em));
+      height: $border-height;
+      background: #000;
+      transition: width .3s,
+                  transform .3s;
+    }
+
+    &:not(.active):hover::after {
+      width: calc(100% + 2em);
+      transform: translateX(calc(0% - 1em));
+    }
+  }
+}
