@@ -24,7 +24,7 @@ export default new class Flickr {
   _getSize(photo_id, size) {
     return this._fetch(this._getURL('photos.getSizes', {photo_id}))
       .filter(data => data.code !== 1)
-      .map(data => data.sizes.size[0])
+      .map(data => data.sizes.size.find(i => i.label === size))
       .pluck('source')
   }
 
@@ -51,7 +51,7 @@ export default new class Flickr {
       .map(data => data.photos.photo)
       .flatMap((photos) =>
         Observable.forkJoin(
-          photos.map(({id}) => this._getSize(id, 'Large 1600'))
+          photos.map(({id}) => this._getSize(id, 'Large Square'))
         )
       )
   }
