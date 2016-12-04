@@ -31,7 +31,7 @@ class Projects extends Component {
 
   render() {
     return (
-      <div className="projects">
+      <div className="projects container">
         { this.displayProjects(this.getProjects()) }
       </div>
     );
