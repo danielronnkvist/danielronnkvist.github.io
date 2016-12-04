@@ -6,11 +6,25 @@ import './App.scss';
 import CloseButton from './../../components/closeButton/CloseButton.js';
 import Header from './../../components/header/Header.js';
 import Projects from './../projects/Projects.js';
+import Tabs from './../../components/tabs/Tabs.js';
+
+// Constants
+import * as availableTabs from './../../components/tabs/constants.js'
 
 class App extends Component {
 
   getCloseButton(project) {
     return project.id ? <CloseButton/> : '';
+  }
+
+  getTabComponent(tab) {
+    switch (tab) {
+      case availableTabs.PHOTOS:
+        return <div>hej</div>;
+      case availableTabs.PROJECTS:
+      default:
+        return <Projects/>;
+    }
   }
 
   render() {
@@ -23,7 +37,8 @@ class App extends Component {
       <div>
         <Header project={project}/>
         { this.getCloseButton(project) }
-        <Projects/>
+        <Tabs tabs={Object.values(availableTabs)}/>
+        { this.getTabComponent(this.props.tab) }
       </div>
     );
   }
@@ -31,4 +46,5 @@ class App extends Component {
 
 export default connect((state) => ({
   project: state.project,
+  tab: state.tab,
 }))(App);
