@@ -6,7 +6,9 @@ import { getPhotos } from './actions.js';
 
 class Photos extends Component {
   componentWillMount() {
-    this.props.getPhotos();
+    if(this.props.photos.length === 0) {  
+      this.props.getPhotos();
+    }
   }
 
   render() {
