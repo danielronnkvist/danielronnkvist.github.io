@@ -6,7 +6,7 @@ import { getPhotos } from './actions.js';
 
 class Photos extends Component {
   componentWillMount() {
-    if(this.props.photos.length === 0) {  
+    if(this.props.photos.length === 0) {
       this.props.getPhotos();
     }
   }
@@ -14,11 +14,12 @@ class Photos extends Component {
   render() {
     const {
       photos,
+      loading,
     } = this.props;
 
     return (
       <div className="photos container">
-        {photos.map(photo => (
+        {loading ? <span>loading..</span> : photos.map(photo => (
           <img key={photo} src={photo} />
         ))}
       </div>
@@ -27,7 +28,8 @@ class Photos extends Component {
 }
 
 export default connect((state) => ({
-  photos: state.photos,
+  photos: state.photos.data,
+  loading: state.photos.loading,
 }), (dispatch) => ({
   getPhotos: state => dispatch(getPhotos(state)),
 }))(Photos);
