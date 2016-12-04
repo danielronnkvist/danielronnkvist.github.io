@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import './Photos.scss';
 import Flickr from './Flickr.js';
 import { getPhotos } from './actions.js';
+import Loading from './../../components/loading/loading.js';
 
 class Photos extends Component {
   componentWillMount() {
@@ -19,7 +20,7 @@ class Photos extends Component {
 
     return (
       <div className="photos container">
-        {loading ? <span>loading..</span> : photos.map(photo => (
+        {loading ? <Loading /> : photos.map(photo => (
           <img key={photo} src={photo} />
         ))}
       </div>
