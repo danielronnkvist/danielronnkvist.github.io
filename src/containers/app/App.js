@@ -6,6 +6,7 @@ import './App.scss';
 import CloseButton from './../../components/closeButton/CloseButton.js';
 import Header from './../../components/header/Header.js';
 import Projects from './../projects/Projects.js';
+import Photos from './../photos/Photos.js';
 import Tabs from './../../components/tabs/Tabs.js';
 
 // Constants
@@ -20,7 +21,7 @@ class App extends Component {
   getTabComponent(tab) {
     switch (tab) {
       case availableTabs.PHOTOS:
-        return <div>hej</div>;
+        return <Photos/>;
       case availableTabs.PROJECTS:
       default:
         return <Projects/>;
