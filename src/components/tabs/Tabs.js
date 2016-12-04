@@ -5,12 +5,18 @@ import { changeTab } from './../../actions';
 
 class Tabs extends Component {
   render() {
+    const {
+      tabs,
+      currentTab,
+      changeTab,
+    } = this.props;
+
     return (
       <div className="tabs">
-        {this.props.tabs.map(t => (
-          <button key={t} onClick={() => this.props.changeTab(t)}>
+        {tabs.map(t => (
+          <div key={t} onClick={() => changeTab(t)} className={`tab ${currentTab === t ? 'active' : ''}`}>
             {t}
-          </button>
+          </div>
         ))}
       </div>
     );
@@ -18,7 +24,6 @@ class Tabs extends Component {
 }
 
 export default connect((state) => ({
-  tab: state.tab,
 }), (dispatch) => ({
   changeTab: (state) => dispatch(changeTab(state)),
 }))(Tabs);

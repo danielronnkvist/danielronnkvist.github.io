@@ -31,13 +31,14 @@ class App extends Component {
     const {
       project,
       onProjectClick,
+      tab,
     } = this.props;
 
     return (
       <div>
         <Header project={project}/>
         { this.getCloseButton(project) }
-        <Tabs tabs={Object.values(availableTabs)}/>
+        <Tabs tabs={Object.values(availableTabs)} currentTab={tab}/>
         { this.getTabComponent(this.props.tab) }
       </div>
     );
